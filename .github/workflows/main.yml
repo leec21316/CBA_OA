@@ -34,7 +34,7 @@ jobs:
         echo "VSTEST_PATH=$vsTestPath" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
 
-   - name: Run tests with VSTest
-     shell: pwsh
-     run: |
+    - name: Run tests with VSTest
+      shell: pwsh
+      run: |
         & "$env:VSTEST_PATH" "src\IO.Swagger.Test\bin\Release\IO.Swagger.Test.dll" --logger:trx
