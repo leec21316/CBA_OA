@@ -2,9 +2,9 @@ name: .NET Framework 4.8 Regression Tests
 
 on:
   push:
-    branches: [ master ]
+    branches: [ feature/Dongsheng-CBATest ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   test:
