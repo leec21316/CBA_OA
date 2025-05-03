@@ -14,6 +14,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Cache NuGet packages
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.nuget/packages
+        key: nuget-${{ runner.os }}-${{ hashFiles('**/packages.config') }}
+        restore-keys: |
+          nuget-${{ runner.os }}-      
+
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.3.1
 
@@ -33,3 +42,11 @@ jobs:
         Write-Host "Using VSTest at $vsTestPath"
 
         & "$vsTestPath" "src\IO.Swagger.Test\bin\Release\IO.Swagger.Test.dll" --logger:trx
+        
+    - name: Upload test results
+      if: always()  # ensure this runs even if tests fail
+      uses: actions/upload-artifact@v3
+      with:
+        name: TestResults
+        path: |
+          src/IO.Swagger.Test/TestResults/*.trx
