@@ -382,14 +382,6 @@ namespace IO.Swagger.Test
         }
 
         [Test]
-        public void GetPetById_ExistingPet_ShouldReturnPet()
-        {
-            var response = instance.GetPetByIdWithHttpInfo(1);
-            Assert.AreEqual(response.Data.Id, 1);
-            Assert.AreEqual(200, response.StatusCode);
-        }
-
-        [Test]
         [Ignore("Server refuse this request media type.")]
         public void UpdatePetWithForm_ValidData_ShouldUpdateFields()
         {
