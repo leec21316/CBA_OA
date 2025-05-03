@@ -35,7 +35,8 @@ namespace IO.Swagger.Test
     [TestFixture]
     public class UserApiTests
     {
-        private readonly string baseUrl = "http://localhost:8080/api/v3";
+        // private readonly string baseUrl = "http://localhost:8080/api/v3";
+        private readonly string baseUrl = "https://petstore.swagger.io/v2";
         private UserApi instance;
         private RestClient client;
 
