@@ -23,6 +23,20 @@ jobs:
     - name: Build solution
       run: msbuild IO.Swagger.sln /p:Configuration=Release
 
+    - name: Start API Server
+      run: docker run -d -p 8080:8080 swaggerapi/petstore
+
+    - name: Wait for API to be ready
+      run: |
+        echo "Waiting for Petstore API to start..."
+        for i in {1..10}; do
+          if curl --silent http://localhost:8080/api/v3/swagger.json > /dev/null; then
+            echo "API is up!"
+            break
+          fi
+          sleep 5
+        done
+
     - name: Find and run VSTest
       shell: pwsh
       run: |
