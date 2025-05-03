@@ -61,17 +61,6 @@ namespace IO.Swagger.Test
         }
 
         /// <summary>
-        /// Test an instance of UserApi
-        /// </summary>
-        [Test]
-        public void InstanceTest()
-        {
-            // TODO uncomment below to test 'IsInstanceOfType' UserApi
-            //Assert.IsInstanceOfType(typeof(UserApi), instance, "instance is a UserApi");
-        }
-
-
-        /// <summary>
         /// Test CreateUser
         /// </summary>
         [Test]
@@ -381,90 +370,6 @@ namespace IO.Swagger.Test
                response.StatusCode == HttpStatusCode.NotFound ||
                response.StatusCode == HttpStatusCode.BadRequest,
                    $"Expected 400 or 404 but got {response.StatusCode}");
-        }
-        /// <summary>
-        /// Test CreateUsersWithArrayInput
-        /// </summary>
-        [Test]
-        public void CreateUsersWithArrayInputTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //List<User> body = null;
-            //instance.CreateUsersWithArrayInput(body);
-            
-        }
-        
-        /// <summary>
-        /// Test CreateUsersWithListInput
-        /// </summary>
-        [Test]
-        public void CreateUsersWithListInputTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //List<User> body = null;
-            //instance.CreateUsersWithListInput(body);
-            
-        }
-        
-        /// <summary>
-        /// Test DeleteUser
-        /// </summary>
-        [Test]
-        public void DeleteUserTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string username = null;
-            //instance.DeleteUser(username);
-            
-        }
-        
-        /// <summary>
-        /// Test GetUserByName
-        /// </summary>
-        [Test]
-        public void GetUserByNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string username = null;
-            //var response = instance.GetUserByName(username);
-            //Assert.IsInstanceOf<User> (response, "response is User");
-        }
-        
-        /// <summary>
-        /// Test LoginUser
-        /// </summary>
-        [Test]
-        public void LoginUserTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string username = null;
-            //string password = null;
-            //var response = instance.LoginUser(username, password);
-            //Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
-        /// Test LogoutUser
-        /// </summary>
-        [Test]
-        public void LogoutUserTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.LogoutUser();
-            
-        }
-        
-        /// <summary>
-        /// Test UpdateUser
-        /// </summary>
-        [Test]
-        public void UpdateUserTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string username = null;
-            //User body = null;
-            //instance.UpdateUser(username, body);
-            
         }
         
     }

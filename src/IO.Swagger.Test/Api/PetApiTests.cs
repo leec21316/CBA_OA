@@ -64,16 +64,6 @@ namespace IO.Swagger.Test
             instance = null;
         }
 
-        /// <summary>
-        /// Test an instance of PetApi
-        /// </summary>
-        [Test]
-        public void InstanceTest()
-        {
-            // TODO uncomment below to test 'IsInstanceOfType' PetApi
-            //Assert.IsInstanceOfType(typeof(PetApi), instance, "instance is a PetApi");
-        }
-
         [Test]
         public void UploadImage_ValidFile_ShouldReturn200()
         {
@@ -527,82 +517,6 @@ namespace IO.Swagger.Test
             }
         }
 
-        /// <summary>
-        /// Test FindPetsByStatus
-        /// </summary>
-        [Test]
-        public void FindPetsByStatusTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //List<string> status = null;
-            //var response = instance.FindPetsByStatus(status);
-            //Assert.IsInstanceOf<List<Pet>> (response, "response is List<Pet>");
-        }
-        
-        /// <summary>
-        /// Test FindPetsByTags
-        /// </summary>
-        [Test]
-        public void FindPetsByTagsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //List<string> tags = null;
-            //var response = instance.FindPetsByTags(tags);
-            //Assert.IsInstanceOf<List<Pet>> (response, "response is List<Pet>");
-        }
-        
-        /// <summary>
-        /// Test GetPetById
-        /// </summary>
-        [Test]
-        public void GetPetByIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? petId = null;
-            //var response = instance.GetPetById(petId);
-            //Assert.IsInstanceOf<Pet> (response, "response is Pet");
-        }
-        
-        /// <summary>
-        /// Test UpdatePet
-        /// </summary>
-        [Test]
-        public void UpdatePetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Pet body = null;
-            //instance.UpdatePet(body);
-            
-        }
-        
-        /// <summary>
-        /// Test UpdatePetWithForm
-        /// </summary>
-        [Test]
-        public void UpdatePetWithFormTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? petId = null;
-            //string name = null;
-            //string status = null;
-            //instance.UpdatePetWithForm(petId, name, status);
-            
-        }
-        
-        /// <summary>
-        /// Test UploadFile
-        /// </summary>
-        [Test]
-        public void UploadFileTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? petId = null;
-            //string additionalMetadata = null;
-            //System.IO.Stream _file = null;
-            //var response = instance.UploadFile(petId, additionalMetadata, _file);
-            //Assert.IsInstanceOf<ApiResponse> (response, "response is ApiResponse");
-        }
-        
     }
 
 }

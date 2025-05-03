@@ -59,15 +59,6 @@ namespace IO.Swagger.Test
             instance = null;
         }
 
-        /// <summary>
-        /// Test an instance of StoreApi
-        /// </summary>
-        [Test]
-        public void InstanceTest()
-        {
-            // TODO uncomment below to test 'IsInstanceOfType' StoreApi
-            //Assert.IsInstanceOfType(typeof(StoreApi), instance, "instance is a StoreApi");
-        }
 
         [Test]
         public void GetInventory_ShouldReturnDictionary()
@@ -226,53 +217,6 @@ namespace IO.Swagger.Test
             var deleteResponse = client.Execute(deleteRequest);
 
             Assert.AreEqual(HttpStatusCode.OK, deleteResponse.StatusCode);
-        }
-
-        /// <summary>
-        /// Test DeleteOrder
-        /// </summary>
-        [Test]
-        public void DeleteOrderTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? orderId = null;
-            //instance.DeleteOrder(orderId);
-            
-        }
-        
-        /// <summary>
-        /// Test GetInventory
-        /// </summary>
-        [Test]
-        public void GetInventoryTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.GetInventory();
-            //Assert.IsInstanceOf<Dictionary<string, int?>> (response, "response is Dictionary<string, int?>");
-        }
-        
-        /// <summary>
-        /// Test GetOrderById
-        /// </summary>
-        [Test]
-        public void GetOrderByIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? orderId = null;
-            //var response = instance.GetOrderById(orderId);
-            //Assert.IsInstanceOf<Order> (response, "response is Order");
-        }
-        
-        /// <summary>
-        /// Test PlaceOrder
-        /// </summary>
-        [Test]
-        public void PlaceOrderTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Order body = null;
-            //var response = instance.PlaceOrder(body);
-            //Assert.IsInstanceOf<Order> (response, "response is Order");
         }
         
     }
