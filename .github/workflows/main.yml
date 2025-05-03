@@ -33,11 +33,3 @@ jobs:
         Write-Host "Using VSTest at $vsTestPath"
 
         & "$vsTestPath" "src\IO.Swagger.Test\bin\Release\IO.Swagger.Test.dll" --logger:trx
-
-    - name: Upload test results
-      if: always()  # ensure this runs even if tests fail
-      uses: actions/upload-artifact@v3
-      with:
-        name: TestResults
-        path: |
-          src/IO.Swagger.Test/TestResults/*.trx
