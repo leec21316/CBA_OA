@@ -34,8 +34,8 @@ namespace IO.Swagger.Test
     [TestFixture]
     public class StoreApiTests
     {
-        // private readonly string baseUrl = "http://localhost:8080/api/v3";
-        private readonly string baseUrl = "https://petstore.swagger.io/v2";
+        private readonly string baseUrl = "http://localhost:8080/api/v3";
+        // private readonly string baseUrl = "https://petstore.swagger.io/v2";
         private StoreApi instance;
         private RestClient client;
 
@@ -216,7 +216,7 @@ namespace IO.Swagger.Test
         [Test]
         public void DeleteOrder_InvalidId_ShouldReturnOk()
         {
-            long orderId = -99999;
+            var orderId = Uri.EscapeDataString("#$%#");
             var deleteRequest = new RestRequest($"store/order/{orderId}", Method.DELETE);
             var deleteResponse = client.Execute(deleteRequest);
 

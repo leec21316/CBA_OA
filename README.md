@@ -30,21 +30,23 @@ In these Api test files, the baseUrl is configured for local testing:
 private readonly string baseUrl = "http://localhost:8080/api/v3";
 
 
-🧪 How to Run Tests Locally
-Open the solution in Visual Studio 2019 or later
+## 🧪 How to Run Tests Locally
 
-Restore NuGet packages (packages.config)
+ - Open the solution in Visual Studio 2019 or later
 
-Build the solution
+ - Restore NuGet packages (packages.config)
 
-Open Test Explorer and click Run All Tests
+ - Build the solution
+
+ - Open Test Explorer and click Run All Tests
 
 
-🤖 Running Tests in CI (GitHub Actions)
-This project includes a GitHub Actions workflow that:
+## 🤖 Running Tests in CI (GitHub Actions)
 
-Builds the solution using MSBuild
+ - This project includes a GitHub Actions workflow that:
 
-Runs tests via vstest.console.exe on Windows
+	 - Builds the solution using MSBuild
 
-See .github/workflows/test.yml for details.
+	 - Runs tests via vstest.console.exe on Windows
+
+ - See .github/workflows/test.yml for details.
